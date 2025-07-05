@@ -39,7 +39,7 @@ We use the following values as provided in the assignment:
 
 * Length of the pendulum: $l = 1.0$ m
 * Mass of the pendulum: $m = 1.0$ kg
-* Gravitational acceleration: $g = 9.81$ m/\s^2
+* Gravitational acceleration: \( g = 9.81 \) m/s\(^2\)
 * External torque: $M(t) = \sin(t)$ (chosen to simulate periodic driving)
 * Initial angle: $\theta(0) = 0.01$ rad
 * Initial angular velocity: $\omega(0) = 0.0$ rad/s
@@ -94,6 +94,3 @@ This combined plot shows how the periodic external torque influences the pendulu
 * The angular displacement and velocity exhibit rich dynamics beyond the simple harmonic approximation.
 * The system is nonlinear due to the sine term $\sin(\theta)$, which makes analytical solutions difficult — justifying the use of numerical ODE solvers.
 
-## Conclusion
-
-This simulation successfully models the dynamics of a pendulum under an external periodic torque. Using Julia’s DifferentialEquations.jl ecosystem enables compact, performant, and expressive implementation of physics-based ODEs. The exercise reinforces both physical understanding and practical modeling skills relevant for scientific computing, control systems, and nonlinear dynamics.
