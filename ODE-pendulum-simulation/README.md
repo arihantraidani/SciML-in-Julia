@@ -39,7 +39,7 @@ We use the following values as provided in the assignment:
 
 * Length of the pendulum: $l = 1.0$ m
 * Mass of the pendulum: $m = 1.0$ kg
-* Gravitational acceleration: $g = 9.81$ m/s$^2$
+* Gravitational acceleration: $g = 9.81$ m/s^2$
 * External torque: $M(t) = \sin(t)$ (chosen to simulate periodic driving)
 * Initial angle: $\theta(0) = 0.01$ rad
 * Initial angular velocity: $\omega(0) = 0.0$ rad/s
