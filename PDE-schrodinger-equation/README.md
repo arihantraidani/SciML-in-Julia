@@ -25,11 +25,13 @@ $\psi(t,x) = u(t,x) + i v(t,x)$
 Substituting into the original equation and separating real and imaginary parts yields a coupled system:
 
 \[
-\begin{aligned}
-\frac{\partial u}{\partial t} &= -\frac{\partial^2 v}{\partial x^2} \\\\
-\frac{\partial v}{\partial t} &= \phantom{-}\frac{\partial^2 u}{\partial x^2}
-\end{aligned}
+\frac{\partial u}{\partial t} = -\frac{\partial^2 v}{\partial x^2}
 \]
+
+\[
+\frac{\partial v}{\partial t} = \frac{\partial^2 u}{\partial x^2}
+\]
+
 
 
 This system describes how the real part $u(t,x)$ and the imaginary part $v(t,x)$ evolve over time.
