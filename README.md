@@ -26,15 +26,15 @@ This structure is designed to mirror a lab notebook, capturing both the technica
 
 | Project | Description | Methodology |
 |--------|-------------|-------------|
-| [`neural_ode_intro`](./neuralODE_intro) | Neural ODE trained on synthetic data from a 2D nonlinear system | Neural ODE |
-| [`sir_classical`](./ODE_SIR_model) | Classical compartmental SIR model for disease spread | Ordinary Differential Equations |
-| [`sir_neuralode`](./sir_neuralode) | Neural ODE trained on ground truth SIR data | Neural ODE |
-| [`pinn_wave`](./pinn_wave) | Solving the 1D wave equation using Physics-Informed Neural Networks | PINN |
-| [`pinn_poisson`](./pinn_poisson) | 2D Poisson equation with known analytical solution | PINN |
-| [`heat_equation_exact`](./PDE_heat_wave) | Heat equation with known exact solution for validation | Method of Lines (MOL) |
-| [`heat_equation_numeric`](./PDE_heat_equation) | Numerical solution to heat equation using FD discretization | Method of Lines (MOL) |
-| [`pde_schrodinger`](./PDE_schrodinger_equation) | Real and imaginary evolution of a Schrödinger-like system | Coupled PDEs via MOL |
-| [`forced_pendulum`](./ODE_pendulum_simulation) | Solving a pendulum ODE under external periodic forcing | Classical Mechanics, ODE |
+| [`neuralODE_SIR_model`](./sir_neuralode) | Neural ODE trained on ground truth SIR data | Neural ODE |
+| [`neuralODE_nonlinear_system`](./neuralODE_intro) | Neural ODE trained on synthetic data from a 2D nonlinear system | Neural ODE |
+| [`PINN_wave`](./pinn_wave) | Solving the 1D wave equation using Physics-Informed Neural Networks | PINN |
+| [`PINN_poisson_equation`](./pinn_poisson) | 2D Poisson equation with known analytical solution | PINN |
+| [`PDE_heat_wave`](./PDE_heatwave) | Heat equation with known exact solution for validation | Method of Lines (MOL) |
+| [`PDE_heat_equation`](./PDE_heat_equation) | Numerical solution to heat equation using FD discretization | Method of Lines (MOL) |
+| [`PDE_schrodinger_equation`](./PDE_schrodinger_equation) | Real and imaginary evolution of a Schrödinger-like system | Coupled PDEs via MOL |
+| [`ODE_SIR_model`](./ODE_SIR_model) | Classical compartmental SIR model for disease spread | Ordinary Differential Equations |
+| [`ODE_forced_pendulum`](./ODE_pendulum_simulation) | Solving a pendulum ODE under external periodic forcing | Classical Mechanics, ODE |
 
 ---
 
