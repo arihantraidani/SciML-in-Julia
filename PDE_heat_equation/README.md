@@ -6,82 +6,63 @@ This project implements a numerical solution to the one-dimensional heat equatio
 
 ## Problem Overview
 
-The **1D heat equation** describes the evolution of temperature \( u(x, t) \) in a homogeneous rod:
+The **1D heat equation** describes the evolution of temperature `u(x, t)` in a homogeneous rod:
 
-\[
-\frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2}
-\]
+∂u/∂t = ∂²u/∂x²
 
-We solve this over the spatial domain \( x \in [0, 1] \) and temporal domain \( t \in [0, 1] \), with the following conditions:
+We solve this over the spatial domain `x ∈ [0, 1]` and time domain `t ∈ [0, 1]` with the following:
 
 - **Initial condition:**  
-  \[
-  u(x, 0) = \sin(\pi x)
-  \]
+  `u(x, 0) = sin(πx)`
 
 - **Boundary conditions:**  
-  \[
-  u(0, t) = u(1, t) = 0 \quad \text{(Dirichlet boundaries)}
-  \]
+  `u(0, t) = u(1, t) = 0`  (Dirichlet)
 
-Physically, this models a rod with both ends held at zero temperature, and an initial internal temperature profile shaped like a sine curve. The system is closed and loses heat over time through diffusion.
+Physically, this models a rod with both ends held at zero temperature, and an initial internal temperature profile shaped like a sine curve. Heat gradually diffuses over time.
 
 ---
 
-## Mathematical and Numerical Method
+## Numerical Method
 
-We discretize the **spatial dimension** using finite differences (100 internal points) and treat **time** as continuous. This converts the PDE into a system of ODEs, which is then integrated using `Tsit5()`, a high-order Runge-Kutta method.
+The equation is solved using the **Method of Lines**, where:
 
-This technique — known as the **Method of Lines (MOL)** — transforms:
+- The spatial domain is discretized using finite differences.
+- The resulting ODE system is solved using the `Tsit5()` Runge-Kutta method.
 
-\[
-\frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2}
-\]
+This transforms the PDE into:
 
-into a large system:
+du/dt = A * u
 
-\[
-\frac{d\mathbf{u}}{dt} = A \mathbf{u}
-\]
-
-where \( A \) is the discretized Laplacian operator matrix.
+Where `A` is the discrete Laplacian matrix.
 
 ---
 
 ## Tools and Packages
 
-- **`ModelingToolkit.jl`**: for symbolic PDE definitions and automatic discretization
-- **`MethodOfLines.jl`**: to convert the PDE into an ODE system using finite differences
-- **`OrdinaryDiffEq.jl`**: to solve the resulting ODE system numerically
-- **`Plots.jl`**: to visualize the temperature distribution
+- `ModelingToolkit.jl` — for symbolic PDE modeling
+- `MethodOfLines.jl` — for space discretization
+- `OrdinaryDiffEq.jl` — for time integration
+- `Plots.jl` — for visual output
 
 ---
 
 ## Results and Interpretation
 
-The simulation computes the temperature profile at the final time \( t = 1.0 \). The result confirms expected physical behavior:
+The simulation computes the temperature profile at final time `t = 1.0`. As expected:
 
-- Heat diffuses symmetrically from the sine-shaped initial state.
-- The temperature approaches zero everywhere as the system tends toward thermal equilibrium.
-- The boundary conditions are correctly enforced at \( x = 0 \) and \( x = 1 \), where the temperature remains zero throughout.
+- The sine-shaped initial temperature dissipates over time.
+- Heat spreads out uniformly, approaching equilibrium.
+- The boundary temperature remains zero throughout.
 
-### Visualization
-
-The following plot shows the temperature distribution \( u(x, t=1.0) \):
+### Plot: Temperature at `t = 1`
 
 ![heat_solution_plot](heat_solution_plot.png)
-
-This visual confirms that the sine-shaped heat pulse has dissipated significantly over time — a hallmark of diffusion-driven dynamics.
 
 ---
 
 ## Reflections
 
-- The **method of lines** provides a clean and modular approach to solving PDEs numerically by leveraging the strength of ODE solvers.
-- Julia’s **ModelingToolkit.jl** and **MethodOfLines.jl** abstract away much of the boilerplate while maintaining flexibility.
-- The use of symbolic PDE formulation feels intuitive and scales well to more complex systems.
-- This project solidified my understanding of numerical PDE discretization and heat diffusion physics.
-
-
-
+- The method of lines is intuitive and powerful for parabolic PDEs like the heat equation.
+- Julia’s SciML tools provide a symbolic-to-numeric workflow that scales well.
+- This project deepened my understanding of both diffusion physics and numerical PDE methods.
 
