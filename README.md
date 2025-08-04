@@ -31,10 +31,9 @@ This structure is designed to mirror a lab notebook, capturing both the technica
 | [`sir_neuralode`](./sir_neuralode) | Neural ODE trained on ground truth SIR data | Neural ODE |
 | [`pinn_wave`](./pinn_wave) | Solving the 1D wave equation using Physics-Informed Neural Networks | PINN |
 | [`pinn_poisson`](./pinn_poisson) | 2D Poisson equation with known analytical solution | PINN |
-| [`heat_equation_exact`](./heat_wave) | Heat equation with known exact solution for validation | Method of Lines (MOL) |
-| [`heat_equation_numeric`](./heat_equation) | Numerical solution to heat equation using FD discretization | Method of Lines (MOL) |
+| [`heat_equation_exact`](./PDE_heat_wave) | Heat equation with known exact solution for validation | Method of Lines (MOL) |
+| [`heat_equation_numeric`](./PDE_heat_equation) | Numerical solution to heat equation using FD discretization | Method of Lines (MOL) |
 | [`pde_schrodinger`](./PDE_schrodinger_equation) | Real and imaginary evolution of a Schrödinger-like system | Coupled PDEs via MOL |
-| [`lorenz_attractor`](./lorenz_attractor) | Simulation of the chaotic Lorenz system | Dynamical Systems, ODE |
 | [`forced_pendulum`](./ODE_pendulum_simulation) | Solving a pendulum ODE under external periodic forcing | Classical Mechanics, ODE |
 
 ---
