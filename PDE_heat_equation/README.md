@@ -56,7 +56,7 @@ The simulation computes the temperature profile at final time `t = 1.0`. As expe
 
 ### Plot: Temperature at `t = 1`
 
-![heat_solution_plot](heat_solution_plot.png)
+![heat_solution_plot](heat_equation.png)
 
 ---
 
