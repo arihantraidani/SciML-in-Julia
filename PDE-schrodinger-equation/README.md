@@ -84,7 +84,9 @@ I implemented the solution in Julia using the following approach:
 
 ## Results and Interpretation
 
-The output is an animated GIF: `schrodinger_real_split.gif`. It shows:
+The output is an animated GIF: Real and Imaginary Evolution of the Wavefunction:
+
+![Schrödinger Dynamics](schrodinger_real_split.gif)
 
 * The **real part** $u(t,x) = \text{Re}(\psi)$
 * The **imaginary part** $v(t,x) = \text{Im}(\psi)$
