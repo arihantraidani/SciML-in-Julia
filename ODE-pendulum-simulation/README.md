@@ -89,13 +89,10 @@ savefig("pendulum_dynamics.pdf")
 
 ## Visual Output
 
-The solution is visualized in two ways:
+The angular position and angular velocity are plotted together over time:
 
-1. **Combined plot**: Angular position and velocity over time  
-   ![pendulum_dynamics](pendulum_dynamics.png)
-
-2. **Subplots**: Separate time series for θ(t) and ω(t)  
-   ![pendulum_subplots](pendulum_subplots.png)
+📄 **Output:**  
+[`pendulum_dynamics.pdf`](pendulum_dynamics.pdf)
 
 ---
 
