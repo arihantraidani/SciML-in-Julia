@@ -26,16 +26,16 @@ This structure is designed to mirror a lab notebook, capturing both the technica
 
 | Project | Description | Methodology |
 |--------|-------------|-------------|
-| [`neural_ode_intro`](./neural_ode_intro) | Neural ODE trained on synthetic data from a 2D nonlinear system | Neural ODE |
-| [`sir_classical`](./sir_classical) | Classical compartmental SIR model for disease spread | Ordinary Differential Equations |
+| [`neural_ode_intro`](./neuralODE_intro) | Neural ODE trained on synthetic data from a 2D nonlinear system | Neural ODE |
+| [`sir_classical`](./ODE_SIR_model) | Classical compartmental SIR model for disease spread | Ordinary Differential Equations |
 | [`sir_neuralode`](./sir_neuralode) | Neural ODE trained on ground truth SIR data | Neural ODE |
 | [`pinn_wave`](./pinn_wave) | Solving the 1D wave equation using Physics-Informed Neural Networks | PINN |
 | [`pinn_poisson`](./pinn_poisson) | 2D Poisson equation with known analytical solution | PINN |
 | [`heat_equation_exact`](./heat_equation_exact) | Heat equation with known exact solution for validation | Method of Lines (MOL) |
 | [`heat_equation_numeric`](./heat_equation_numeric) | Numerical solution to heat equation using FD discretization | Method of Lines (MOL) |
-| [`pde_schrodinger`](./pde_schrodinger) | Real and imaginary evolution of a Schrödinger-like system | Coupled PDEs via MOL |
+| [`pde_schrodinger`](./PDE_schrodinger_equation) | Real and imaginary evolution of a Schrödinger-like system | Coupled PDEs via MOL |
 | [`lorenz_attractor`](./lorenz_attractor) | Simulation of the chaotic Lorenz system | Dynamical Systems, ODE |
-| [`forced_pendulum`](./forced_pendulum) | Solving a pendulum ODE under external periodic forcing | Classical Mechanics, ODE |
+| [`forced_pendulum`](./ODE_pendulum_simulation) | Solving a pendulum ODE under external periodic forcing | Classical Mechanics, ODE |
 
 ---
 
