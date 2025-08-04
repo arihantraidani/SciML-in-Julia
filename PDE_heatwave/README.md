@@ -56,7 +56,7 @@ At `t = 1.0`, the temperature profile shows clear diffusion from the sine-shaped
 
 ### Final Temperature Distribution
 
-![heat_solution_plot](heat_solution_plot.png)
+![heat_solution_plot](heat_wave.png)
 
 This result is consistent with the expected physical behavior of a rod dissipating internal heat over time under fixed-boundary constraints.
 
