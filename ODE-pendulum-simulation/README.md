@@ -85,12 +85,36 @@ plot(sol, idxs=1, label="θ(t): Angular Position", xlabel="Time (s)", ylabel="Va
 plot!(sol, idxs=2, label="ω(t): Angular Velocity", linewidth=2)
 savefig("pendulum_dynamics.pdf")
 ```
+---
+
+## Visual Output
+
+The solution is visualized in two ways:
+
+1. **Combined plot**: Angular position and velocity over time  
+   ![pendulum_dynamics](pendulum_dynamics.png)
+
+2. **Subplots**: Separate time series for θ(t) and ω(t)  
+   ![pendulum_subplots](pendulum_subplots.png)
+
+---
 
 This combined plot shows how the periodic external torque influences the pendulum's motion. Depending on the driving frequency and amplitude, the pendulum may exhibit resonance-like amplification or complex oscillatory behavior.
 
-## Observations
+## Results and Interpretation
 
-* The inclusion of the sine-driven torque $M(t) = \sin(t)$ introduces sustained energy into the system, preventing damping and maintaining oscillations.
-* The angular displacement and velocity exhibit rich dynamics beyond the simple harmonic approximation.
-* The system is nonlinear due to the sine term $\sin(\theta)$, which makes analytical solutions difficult — justifying the use of numerical ODE solvers.
+- The angular displacement θ(t) exhibits oscillatory behavior, modulated by the external torque `sin(t)`.
+- Unlike a simple harmonic oscillator, the presence of `sin(θ)` makes the system nonlinear — the period and amplitude are not constant.
+- The solution remains bounded and physically realistic, showing no runaway energy growth — consistent with a pendulum driven by a smooth periodic torque.
+- The angular velocity ω(t) oscillates around zero and reflects the symmetry of the forcing function.
+
+This simulation demonstrates how even a simple classical system can lead to rich dynamics when external forcing is introduced.
+
+---
+
+## Reflections
+
+- This project reinforces key concepts in nonlinear dynamics, particularly forced oscillations.
+- Julia’s ODE solver interface is intuitive and expressive for physical systems modeling.
+- The approach can be extended to study chaotic regimes by increasing the amplitude of `M(t)` or using non-sinusoidal driving functions.
 
