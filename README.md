@@ -26,8 +26,8 @@ This structure is designed to mirror a lab notebook, capturing both the technica
 
 | Project | Description | Methodology |
 |--------|-------------|-------------|
-| [`neuralODE_SIR_model`](./sir_neuralode) | Neural ODE trained on ground truth SIR data | Neural ODE |
-| [`neuralODE_nonlinear_system`](./neuralODE_intro) | Neural ODE trained on synthetic data from a 2D nonlinear system | Neural ODE |
+| [`NeuralODE_SIR_model`](./sir_neuralode) | Neural ODE trained on ground truth SIR data | Neural ODE |
+| [`NeuralODE_nonlinear_system`](./neuralODE_intro) | Neural ODE trained on synthetic data from a 2D nonlinear system | Neural ODE |
 | [`PINN_wave`](./pinn_wave) | Solving the 1D wave equation using Physics-Informed Neural Networks | PINN |
 | [`PINN_poisson_equation`](./pinn_poisson) | 2D Poisson equation with known analytical solution | PINN |
 | [`PDE_heat_wave`](./PDE_heatwave) | Heat equation with known exact solution for validation | Method of Lines (MOL) |
